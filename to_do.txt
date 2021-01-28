@@ -1,0 +1,4 @@
+1. Set up NodeJS server
+2. Point server towards database(SQL or Mongo)
+3. Set up Router in index.js for routes in App.js/components
+4. Send tracer from client to server to DB via saga/redux
