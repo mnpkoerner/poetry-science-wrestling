@@ -1,0 +1,11 @@
+BONJOUR -
+
+Here's a doc to store a bunch of notes and brainstorm
+I have no idea what we're going to do with all this yet,
+but here's an empty project for us to work in
+
+- IDEAS
+1. use NASA API to do something...
+2. use BRAIN.js to do something with a neural network
+    - first I need to watch https://www.youtube.com/watch?v=RVMHhtTqUxc to get the basics
+3.
