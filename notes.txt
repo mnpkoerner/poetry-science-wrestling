@@ -8,4 +8,4 @@ but here's an empty project for us to work in
 1. use NASA API to do something...
 2. use BRAIN.js to do something with a neural network
     - first I need to watch https://www.youtube.com/watch?v=RVMHhtTqUxc to get the basics
-3.
+3. try to remember how to code, dummy

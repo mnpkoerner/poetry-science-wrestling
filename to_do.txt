@@ -1,4 +1,7 @@
 1. Set up NodeJS server
 2. Point server towards database(SQL or Mongo)
+    -- set up SQL server/set up db.sql with placeholders
 3. Set up Router in index.js for routes in App.js/components
+    -- set up express
 4. Send tracer from client to server to DB via saga/redux
+
