@@ -1,21 +1,8 @@
 BONJOUR -
 
-Here's a doc to store a bunch of notes and brainstorm
-I have no idea what we're going to do with all this yet,
-but here's an empty project for us to work in
-
-- IDEAS
-1. use NASA API to do something...
-2. use BRAIN.js to do something with a neural network
-    - first I need to watch https://www.youtube.com/watch?v=RVMHhtTqUxc to get the basics
 3. Build a website for my radio show. Poetry, Science, Wrestling
     - use NASA API to get fun science data on a page
     - have submission form for people to send it comments/poems
     - wrestling recap
     - grab audio clips from the show, link to spotify/apple music playlists
     - link to KFAI's home page/donation page
-4. Build a board game with boardgame.io
-    - come up with new game = fucking tricky
-    - rebuild an old game? maybe easier... check out the royal game of ur
-5. Snarky to do list
-6. Discogs, but for independent musicians to upload/catalog/sell/trade their gear
