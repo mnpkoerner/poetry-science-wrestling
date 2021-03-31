@@ -1,7 +1,19 @@
-1. Set up NodeJS server
-2. Point server towards database(SQL or Mongo)
-    -- set up SQL server/set up db.sql with placeholders
-3. Set up Router in index.js for routes in App.js/components
-    -- set up express
-4. Send tracer from client to server to DB via saga/redux
+Eyyy Elliott, here what's cracking so far:
+There's a NodeJS server set up AND a client set up,
+they're attached, but no data is passing between them
 
+
+React is sorta heavy, but we're gonna use it and try to do cool stuff with it!
+ - Set up a blog
+ - Get some data from APIs: https://public-apis.io/category/science-apis
+ - Image upload? Yeah probably...
+
+
+
+
+
+TO DO:
+1. Wireframe project
+2. Build project
+3. Test project
+4. Rejoice, we've conquored
