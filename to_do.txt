@@ -9,11 +9,24 @@ React is sorta heavy, but we're gonna use it and try to do cool stuff with it!
  - Image upload? Yeah probably...
 
 
-
-
-
 TO DO:
 1. Wireframe project
 2. Build project
 3. Test project
 4. Rejoice, we've conquored
+
+
+Outline:
+1. Splash page/loading graphic
+2. Home page/blog
+    - https://www.freecodecamp.org/news/fullstack-react-blog-app-with-express-and-psql/
+    - Headers, show description, image upload, tracklist, tags, birthdays
+3. Top Nav/Side Tray
+    - Links
+        - KFAI Home Page
+        - Show Clips: https://www.worldofsuey.com/limited-fakes
+        - Science Widgets? Connect to NASA API?
+        - Monthy Crossword Contest?
+        - Comments (form w/ name, email, comment send to admin via something like mailchimp)
+        - Socket for other science Widgets?
+        - Websockets for live show chat?
