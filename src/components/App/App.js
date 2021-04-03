@@ -1,5 +1,6 @@
 
 import './App.css'
+import RPS from '../RPS/RPS'
 //test
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <p>
           Test text.
         </p>
+        <RPS />
 
       </header>
     </div>

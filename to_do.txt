@@ -30,3 +30,4 @@ Outline:
         - Comments (form w/ name, email, comment send to admin via something like mailchimp)
         - Socket for other science Widgets?
         - Websockets for live show chat?
+        - WTF am I supposed to do about wrestling...
