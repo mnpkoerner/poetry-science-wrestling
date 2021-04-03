@@ -32,3 +32,5 @@ Outline:
         - Socket for other science Widgets?
         - Websockets for live show chat?
         - WTF am I supposed to do about wrestling...
+
+--Test Text in todo to check out tower and see how it works
