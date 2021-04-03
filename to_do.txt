@@ -17,7 +17,8 @@ TO DO:
 
 
 Outline:
-1. Splash page/loading graphic
+1. Splash page/loading graphic - Rock, Paper, Scissor game - wrestling themed RPS, only if they "pin"
+    the CPU can they access the rest of the website
 2. Home page/blog
     - https://www.freecodecamp.org/news/fullstack-react-blog-app-with-express-and-psql/
     - Headers, show description, image upload, tracklist, tags, birthdays
