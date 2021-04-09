@@ -6,11 +6,12 @@ export default function RPS() {
 
     const [key, setKey] = useState(0)
 
-    const history = useHistory
+    const history = useHistory();
 
     const checkChoice = (param) => {
         if (param === key){
             console.log('correct')
+            history.push('/home')
         }
         else {
             console.log('try some better moves')
