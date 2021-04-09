@@ -34,3 +34,8 @@ Outline:
         - WTF am I supposed to do about wrestling...
 
 --Test Text in todo to check out tower and see how it works
+
+
+1. make more butterflies - more than 2
+2. make birds, and make them fly away
+ - the program is doing so little work
