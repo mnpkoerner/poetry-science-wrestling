@@ -1,23 +1,41 @@
 const pg = require('pg');
-const Pool = pg.Pool;
-const config = {
-    database: 'psw', // the name of the database
-    host: 'localhost', // where is your database
-    port: 5432, // the port number for your database, 5432 is the default
-    max: 10, // how many connections at one time
-    idleTimeoutMillis: 30000 // 30 seconds to try to connect
-};
+const url = require('url');
 
-// one instance to rul them all!
-const pool = new Pool(config);
+let config = {};
 
-pool.on('connect', (client) => {
-    console.log('pg connected');
-})
+if (process.env.DATABASE_URL) {
+  const params = url.parse(process.env.DATABASE_URL);
+  const auth = params.auth.split(':');
 
-pool.on('error', (err, client) => {
-    console.log('Unexpected error on idle pg client', err);
-    process.exit(-1);
+  config = {
+    user: auth[0],
+    password: auth[1],
+    host: params.hostname,
+    port: params.port,
+    database: params.pathname.split('/')[1],
+    ssl: { rejectUnauthorized: false },
+    max: 10,
+    idleTimeoutMillis: 30000,
+  };
+} else {
+  config = {
+    user: process.env.APP_DB_USER,
+    password: process.env.APP_DB_PASSWORD,
+    host: 'localhost',
+    port: 5432,
+    database: 'psw',
+    max: 10,
+    idleTimeoutMillis: 30000,
+  };
+}
+
+// this creates the pool that will be shared by all other modules
+const pool = new pg.Pool(config);
+
+
+pool.on('error', (err) => {
+  console.log('Unexpected error on idle client', err);
+  process.exit(-1);
 });
 
 module.exports = pool;

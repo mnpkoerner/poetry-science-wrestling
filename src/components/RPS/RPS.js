@@ -8,6 +8,9 @@ export default function RPS() {
 
     const history = useHistory();
 
+    //guess the mystery number logic to grant access to PSW homepage,
+    //TODO: style page and attach this logic to old photos of wrestlers/wreslting moves
+    //Animations -> FramerMotion?
     const checkChoice = (param) => {
         if (param === key){
             console.log('correct')
@@ -28,10 +31,7 @@ export default function RPS() {
         setKey(randomGenerator());
     })
 
-    //get input from user
-    //compare input to random selection from 'computer'
-    //one user gets it right, then they can access the page
-    //we're gonna make it DIFFICULT to get to the website
+
 
     return (
         <div>
