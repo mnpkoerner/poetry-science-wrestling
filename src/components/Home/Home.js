@@ -1,4 +1,4 @@
-
+console.log('this is a fucking test you rube')
 
 export default function Home () {
     return(

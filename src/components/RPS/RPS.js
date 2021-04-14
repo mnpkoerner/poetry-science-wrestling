@@ -31,7 +31,9 @@ export default function RPS() {
         setKey(randomGenerator());
     })
 
+    const login = () => {
 
+    }
 
     return (
         <div>
@@ -46,7 +48,6 @@ export default function RPS() {
             <div
             className="fight"
             onClick={()=>checkChoice(3)}><p>Dive</p></div>
-
 
         </div>
     )
