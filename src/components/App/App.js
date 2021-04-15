@@ -24,6 +24,7 @@ function App() {
           <p>
             Test text.
         </p>
+        <Switch >
           <Route
             exact
             path="/">
@@ -41,13 +42,14 @@ function App() {
           </Route>
           <ProtectedRoute
             exact
-            path="/behold">
+            path="/test">
               <Test />
           </ProtectedRoute>
-
+          </Switch>
 
         </header>
       </div>
+
     </Router>
   );
 }

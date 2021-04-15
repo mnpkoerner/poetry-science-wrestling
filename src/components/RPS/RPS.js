@@ -29,11 +29,7 @@ export default function RPS() {
     useEffect(() => {
         console.log('use effect works')
         setKey(randomGenerator());
-    })
-
-    const login = () => {
-
-    }
+    }, [])
 
     return (
         <div>
