@@ -13,6 +13,7 @@ import Home from '../Home/Home'
 import Register from '../Register/Register'
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import Test from '../Test/Test'
+import NewPost from '../NewPost/NewPost'
 
 
 function App() {
@@ -24,27 +25,32 @@ function App() {
           <p>
             Test text.
         </p>
-        <Switch >
-          <Route
-            exact
-            path="/">
-            <RPS />
-          </Route>
-          <Route
-            exact
-            path="/home">
-            <Home />
-          </Route>
-          <Route
-            exact
-            path="/register">
-            <Register />
-          </Route>
-          <ProtectedRoute
-            exact
-            path="/test">
+          <Switch >
+            <Route
+              exact
+              path="/">
+              <RPS />
+            </Route>
+            <Route
+              exact
+              path="/home">
+              <Home />
+            </Route>
+            <Route
+              exact
+              path="/register">
+              <Register />
+            </Route>
+            <Route
+              exact
+              path="/newpost">
+                <NewPost/>
+            </Route>
+            <ProtectedRoute
+              exact
+              path="/test">
               <Test />
-          </ProtectedRoute>
+            </ProtectedRoute>
           </Switch>
 
         </header>
