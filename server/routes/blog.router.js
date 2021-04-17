@@ -4,8 +4,16 @@ const pool = require('../modules/pool');
 const { rejectUnauthenticated } = require('../modules/authentication-middleware');
 
 router.get('/', (req, res)=>{
-    console.log('in demo route')
-    res.sendStatus(200)
+    const queryText = `
+        SELECT * FROM "post"
+    `
+    pool.query(queryText).then((response)=>{
+        console.log(response);
+        res.send(response.rows)
+    }).catch((error)=>{
+        console.log(error);
+        res.sendStatus(500)
+    })
 })
 
 

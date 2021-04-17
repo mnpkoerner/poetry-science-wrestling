@@ -23,6 +23,8 @@ export default function NewPost() {
             case 'back':
                 history.push('/home');
                 break;
+            default:
+                console.error('something went wrong')
         }
     }
 

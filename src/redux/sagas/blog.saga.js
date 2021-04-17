@@ -11,6 +11,17 @@ function* newPost(action) {
         console.error('error with posting new blog:', error)
     }
 }
+function* getPost(action) {
+    try{
+        console.log('in get post saga')
+        const response = yield axios.get('/api/blog');
+        console.log('response from getting blog:', response)
+        yield put({type: 'SET_POSTS', payload: response.data})
+    }
+    catch (error) {
+        console.error('error with getting blog posts', error)
+    }
+}
 
 
 
@@ -18,6 +29,7 @@ function* newPost(action) {
 
 function* blogSaga() {
     yield takeLatest('NEW_POST', newPost);
+    yield takeLatest('GET_POSTS', getPost)
   }
 
   export default blogSaga;
