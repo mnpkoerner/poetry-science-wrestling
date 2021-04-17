@@ -8,11 +8,10 @@ router.get('/', (req, res)=>{
     res.sendStatus(200)
 })
 
+
+//allows us to post new blog entry
 router.post('/', rejectUnauthenticated, (req, res)=>{
-    console.log(req.body)
-    const date = new Date();
-    console.log(date)
-    const values = [req.user.id, req.body.title, req.body.body, date, req.body.playlist]
+    const values = [req.user.id, req.body.title, req.body.body, new Date(), req.body.playlist]
     const queryText = `
         INSERT INTO "post" ("author", "title", "body", "date", "playlist")
         VALUES ($1, $2, $3, $4, $5);

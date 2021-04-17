@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {useHistory} from 'react-router-dom'
 import Login from '../Login/Login'
 import LogOutButton from '../LogOutButton/LogOutButton';
 
@@ -7,6 +8,8 @@ function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const errors = useSelector((store) => store.errors);
+  
+  const history = useHistory();
   const dispatch = useDispatch();
 
   const registerUser = (event) => {
@@ -64,6 +67,7 @@ function RegisterForm() {
         <Login/>
         <LogOutButton />
     </div>
+    <h1 onClick={()=>history.push('/NewPost')}>MAKE POST</h1>
     </>
   );
 }
