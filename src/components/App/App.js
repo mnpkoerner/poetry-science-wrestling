@@ -21,10 +21,6 @@ function App() {
     <Router >
       <div className="App">
         <header className="App-header">
-
-          <p>
-            Test text.
-        </p>
           <Switch >
             <Route
               exact

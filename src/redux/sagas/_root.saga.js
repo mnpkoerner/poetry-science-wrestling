@@ -2,11 +2,13 @@ import { all } from 'redux-saga/effects';
 import loginSaga from './login.saga';
 import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
+import blogSaga from './blog.saga'
 
 export default function* rootSaga() {
   yield all([
-    loginSaga(), 
+    loginSaga(),
     registrationSaga(),
     userSaga(),
+    blogSaga(), //saga to add new post to DB
   ]);
 }

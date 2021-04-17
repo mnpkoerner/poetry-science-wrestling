@@ -4,6 +4,9 @@ import {useHistory} from 'react-router-dom'
 
 export default function NewPost() {
 
+    const dispatch = useDispatch()
+    const history = useHistory()
+
     const [post, setPost] = useState({
         title: '',
         body: '',
@@ -14,13 +17,18 @@ export default function NewPost() {
 
     const handleClick = (event, keyword) => {
         event.preventDefault()
-        console.log(keyword)
+        setPost({...post, date: new Date().toISOString()})
         switch(keyword){
-            case "submit":
-                console.log('switch submit')
-                console.log(post)
+            case 'submit':
+                dispatch({type: 'NEW_POST', payload: post});
+                break;
+            case 'back':
+                history.push('/home');
+                break;
         }
     }
+
+
 
 
     return(
@@ -38,11 +46,18 @@ export default function NewPost() {
                 value={post.body}
                 onChange={(event)=>setPost({...post, body: event.target.value})}>
             </textarea>
+            <input
+                placeholder="playlist"
+                value={post.playlist}
+                onChange={(event)=>setPost({...post, playlist: event.target.value})}
+                type="text">
+            </input>
             <button
                 onClick={(event)=>handleClick(event, 'submit')}>
                 Submit
             </button>
         </form>
+        <button onClick={(event)=>handleClick(event, 'back')}>Home</button>
         </>
 
     )
