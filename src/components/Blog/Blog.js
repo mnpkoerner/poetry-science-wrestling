@@ -11,7 +11,7 @@ export default function Blog () {
 
     useEffect(()=>{
         dispatch({type: 'GET_POSTS'})
-    }, [])
+    }, [dispatch])
 
     console.log('posts', posts)
     return(
