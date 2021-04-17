@@ -10,14 +10,12 @@ export default function NewPost() {
     const [post, setPost] = useState({
         title: '',
         body: '',
-        date: '',
         playlist: '',
 
     })
 
     const handleClick = (event, keyword) => {
         event.preventDefault()
-        setPost({...post, date: new Date().toISOString()})
         switch(keyword){
             case 'submit':
                 dispatch({type: 'NEW_POST', payload: post});
