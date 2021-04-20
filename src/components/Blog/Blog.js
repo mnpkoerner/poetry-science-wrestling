@@ -14,10 +14,22 @@ export default function Blog () {
     }, [dispatch])
 
     console.log('posts', posts)
+
     return(
         <>
             <h1 onClick={()=>history.push('/register')}>LOGIN</h1>
-            <pre>{JSON.stringify(posts)}</pre>
+            {/* <pre>{JSON.stringify(posts)}</pre> */}
+
+                {posts.map((post)=>{
+                    return(
+                        <div>
+                            <h1>{post.title}</h1>
+                            <p>{post.body}</p>
+                        </div>
+                    )
+                })}
+
+
         </>
     )
 }
