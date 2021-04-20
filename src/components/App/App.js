@@ -14,11 +14,14 @@ import Register from '../Register/Register'
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import About from '../About/About'
 import NewPost from '../NewPost/NewPost'
+import Crossword from '../Crossword/Crossword'
+import Contact from '../Contact/Contact'
+import Audio from '../Audio/Audio'
 
 
 function App() {
 
-  
+
   return (
     <Router >
       <div className="App">
@@ -30,6 +33,15 @@ function App() {
             </Link>
             <Link to="/about">
               About
+            </Link>
+            <Link to="/crossword">
+              Crossword
+            </Link>
+            <Link to="/contact">
+              Contact
+            </Link>
+            <Link to="/audio">
+              Audio
             </Link>
           </div>
 
@@ -54,8 +66,26 @@ function App() {
 
             <Route
               exact
+              path="/crossword">
+              <Crossword />
+            </Route>
+
+            <Route
+              exact
               path="/register">
               <Register />
+            </Route>
+
+            <Route
+              exact
+              path="/contact">
+              <Contact />
+            </Route>
+
+            <Route
+              exact
+              path="/audio">
+              <Audio />
             </Route>
 
             <ProtectedRoute
