@@ -8,7 +8,7 @@ function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const errors = useSelector((store) => store.errors);
-  
+
   const history = useHistory();
   const dispatch = useDispatch();
 
@@ -65,7 +65,7 @@ function RegisterForm() {
     <div>
         <h1>Login Form</h1>
         <Login/>
-        <LogOutButton />
+        <button onClick={()=>dispatch({type: 'LOGOUT'})}>LOGGER</button>
     </div>
     <h1 onClick={()=>history.push('/NewPost')}>MAKE POST</h1>
     </>

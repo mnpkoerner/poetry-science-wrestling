@@ -72,12 +72,6 @@ function App() {
 
             <Route
               exact
-              path="/register">
-              <Register />
-            </Route>
-
-            <Route
-              exact
               path="/contact">
               <Contact />
             </Route>
@@ -86,6 +80,12 @@ function App() {
               exact
               path="/audio">
               <Audio />
+            </Route>
+
+            <Route
+              exact
+              path="/register">
+              <Register />
             </Route>
 
             <ProtectedRoute

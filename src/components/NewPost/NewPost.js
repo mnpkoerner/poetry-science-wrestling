@@ -9,8 +9,7 @@ export default function NewPost() {
 
     const [post, setPost] = useState({
         title: '',
-        body: '',
-        playlist: '',
+        body: ''
 
     })
 
@@ -46,12 +45,6 @@ export default function NewPost() {
                 value={post.body}
                 onChange={(event)=>setPost({...post, body: event.target.value})}>
             </textarea>
-            <input
-                placeholder="playlist"
-                value={post.playlist}
-                onChange={(event)=>setPost({...post, playlist: event.target.value})}
-                type="text">
-            </input>
             <button
                 onClick={(event)=>handleClick(event, 'submit')}>
                 Submit

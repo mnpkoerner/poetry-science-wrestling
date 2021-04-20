@@ -19,10 +19,10 @@ router.get('/', (req, res)=>{
 
 //allows us to post new blog entry
 router.post('/', rejectUnauthenticated, (req, res)=>{
-    const values = [req.user.id, req.body.title, req.body.body, new Date(), req.body.playlist]
+    const values = [req.user.id, req.body.title, req.body.body, new Date()]
     const queryText = `
-        INSERT INTO "post" ("author", "title", "body", "date", "playlist")
-        VALUES ($1, $2, $3, $4, $5);
+        INSERT INTO "post" ("author", "title", "body", "date")
+        VALUES ($1, $2, $3, $4);
     `
     pool.query(queryText, values).then((response)=>{
         res.sendStatus(200);
