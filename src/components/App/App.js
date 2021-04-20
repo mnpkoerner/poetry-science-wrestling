@@ -17,6 +17,8 @@ import NewPost from '../NewPost/NewPost'
 import Crossword from '../Crossword/Crossword'
 import Contact from '../Contact/Contact'
 import Audio from '../Audio/Audio'
+import KFAI from '../KFAI/KFAI'
+import NASA from '../NASA/NASA'
 
 
 function App() {
@@ -42,6 +44,12 @@ function App() {
             </Link>
             <Link to="/audio">
               Audio
+            </Link>
+            <Link to="/kfai">
+              KFAI
+            </Link>
+            <Link to="/nasa">
+              NASA
             </Link>
           </div>
 
@@ -80,6 +88,18 @@ function App() {
               exact
               path="/audio">
               <Audio />
+            </Route>
+
+            <Route
+              exact
+              path="/kfai">
+              <KFAI />
+            </Route>
+
+            <Route
+              exact
+              path="/nasa">
+              <NASA />
             </Route>
 
             <Route
