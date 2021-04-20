@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom'
 import Login from '../Login/Login'
-import LogOutButton from '../LogOutButton/LogOutButton';
 
 function RegisterForm() {
   const [username, setUsername] = useState('');
