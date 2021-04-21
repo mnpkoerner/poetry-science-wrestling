@@ -11,6 +11,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const demo = require('./routes/demo.router.js');
 const blog = require('./routes/blog.router')
+const nasa = require('./routes/nasa.router')
 
 
 // Body parser middleware
@@ -28,6 +29,7 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 app.use('/api/demo', demo);
 app.use('/api/blog', blog);
+app.use('/api/nasa', nasa)
 
 
 // Serve static files
