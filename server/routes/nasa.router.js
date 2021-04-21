@@ -4,6 +4,10 @@ const axios = require('axios');
 
 const router = express.Router();
 
+router.get('/photo', (req, res) =>{
+    // axios.get()
+    console.log('in photo server')
+})
 // return all search images
 // router.get('/:searchterm', (req, res) => {
 //     const giphyList = [];

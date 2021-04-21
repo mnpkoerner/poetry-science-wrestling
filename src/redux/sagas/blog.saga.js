@@ -24,9 +24,6 @@ function* getPost(action) {
 }
 
 
-
-
-
 function* blogSaga() {
     yield takeLatest('NEW_POST', newPost);
     yield takeLatest('GET_POSTS', getPost)
