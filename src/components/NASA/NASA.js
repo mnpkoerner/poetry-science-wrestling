@@ -17,6 +17,12 @@ export default function NASA () {
         <>
         <p>This is where we'll make some fun API calls to NASA's servers</p>
         <button onClick={()=>console.log(nasa)}>CHECK VALUE</button>
+        <div>
+            <h2>{nasa.title}</h2>
+            <p>{nasa.explanation}</p>
+            <iframe width="420" height="315" src={nasa.url}>
+            </iframe>
+        </div>
         </>
     )
 }
