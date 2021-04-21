@@ -5,26 +5,14 @@ const axios = require('axios');
 const router = express.Router();
 
 router.get('/photo', (req, res) =>{
-    // axios.get()
-    console.log('in photo server')
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA}`).then((response)=>{
+        console.log(response.data)
+        res.send(response.data)
+    }).catch((error)=>{
+        console.log(error);
+        res.sendStatus(500)
+    })
+
 })
-// return all search images
-// router.get('/:searchterm', (req, res) => {
-//     const giphyList = [];
-
-//     axios.get(`http://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&q=${req.params.searchterm}&limit=3`)
-//         .then((response) => {
-//             response.data.data.forEach((gif) => {
-//                 giphyList.push({url: gif.images.original.url, title: gif.title});
-//             });
-//             console.log(`GET Response:`, giphyList);
-//             res.send(giphyList);
-//         })
-//         .catch((err) => {
-//             console.log(err);
-//             res.sendStatus(500);
-//         })
-
-// });
 
 module.exports = router;
