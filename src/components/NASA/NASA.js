@@ -19,7 +19,7 @@ export default function NASA() {
     const display = (input) => {
         switch (input.media_type) {
             case 'video':
-                return (<iframe width="420" height="315" src={input.url}></iframe>)
+                return (<iframe width="420" height="315" src={input.url} title="NASA Video of the Day"></iframe>)
             case 'image':
                 return (<img src={input.url} alt={input.title}></img>)
             default:
@@ -43,9 +43,11 @@ export default function NASA() {
                 id="start"
                 name="trip-start"
                 value={date}
-                onChange={(event)=>setDate(event.target.value)}
+                onChange={(event) => setDate(event.target.value)}
                 min="1996-06-16"
-                max={limit()}></input>
+                max={limit()}>
+            </input>
+            <button onClick={()=>dispatch({type: 'GET_PHOTO', payload: date})}>Get</button>
             <div>
                 <h2>{nasa.title}</h2>
                 <p>{nasa.explanation}</p>
