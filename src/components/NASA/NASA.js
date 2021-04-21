@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function NASA() {
@@ -6,9 +6,16 @@ export default function NASA() {
     const dispatch = useDispatch()
 
     const nasa = useSelector(store => store.nasa)
+    const [date, setDate] = useState(new Date())
 
     console.log('nasa has a value and its', nasa)
 
+    //limits the NASA photo API (cannot call date in the future)
+    const limit = () => {
+        return new Date().toISOString().split('T')[0];
+    }
+
+    //NASA API sends either a photo or video, display checks for media_type and renders
     const display = (input) => {
         switch (input.media_type) {
             case 'video':
@@ -31,9 +38,14 @@ export default function NASA() {
             <button onClick={() => console.log(nasa)}>CHECK VALUE</button>
             <label for="start">Start date:</label>
 
-            <input type="date" id="start" name="trip-start"
-                value="2018-07-22"
-                min="1996-06-16" max="2018-12-31"></input>
+            <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value={date}
+                onChange={(event)=>setDate(event.target.value)}
+                min="1996-06-16"
+                max={limit()}></input>
             <div>
                 <h2>{nasa.title}</h2>
                 <p>{nasa.explanation}</p>
