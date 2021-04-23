@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
 
 const rhyme = (state = '', action) => {
-    if(action.type == 'SET_RHYME'){
+    if(action.type === 'SET_RHYME'){
+        console.log('in reducer')
         return action.payload
     }
     else{
@@ -10,7 +11,8 @@ const rhyme = (state = '', action) => {
 }
 
 const synonym = (state = '', action) => {
-    if(action.type == 'SET_SYNONYM'){
+    if(action.type === 'SET_SYNONYM'){
+        console.log('in reducer')
         return action.payload
     }
     else {

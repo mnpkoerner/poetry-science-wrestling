@@ -19,6 +19,7 @@ import Contact from '../Contact/Contact'
 import Audio from '../Audio/Audio'
 import KFAI from '../KFAI/KFAI'
 import NASA from '../NASA/NASA'
+import Words from '../Words/Words'
 
 
 function App() {
@@ -50,6 +51,9 @@ function App() {
             </Link>
             <Link to="/nasa">
               NASA
+            </Link>
+            <Link to="/words">
+              Words
             </Link>
           </div>
 
@@ -106,6 +110,11 @@ function App() {
               exact
               path="/register">
               <Register />
+            </Route>
+            <Route
+              exact
+              path="/words">
+              <Words />
             </Route>
 
             <ProtectedRoute

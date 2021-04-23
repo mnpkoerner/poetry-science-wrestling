@@ -30,7 +30,7 @@ export default function NASA() {
 
     useEffect(() => {
         dispatch({ type: 'GET_PHOTO' })
-    }, [])
+    }, [dispatch])
 
     return (
         <>

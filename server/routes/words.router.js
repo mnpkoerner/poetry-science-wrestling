@@ -16,8 +16,10 @@ router.get('/synonym/:synonym', (req, res)=>{
         }
   }).then(function (response) {
         console.log(response.data);
+        res.send(response.data)
     }).catch(function (error) {
         console.error(error);
+        res.sendStatus(500)
     });
 })
 
@@ -33,8 +35,10 @@ router.get('/rhyme/:rhyme', (req, res)=>{
         }
   }).then(function (response) {
         console.log(response.data);
+        res.send(response.data)
     }).catch(function (error) {
         console.error(error);
+        res.sendStatus(500)
     });
 })
 

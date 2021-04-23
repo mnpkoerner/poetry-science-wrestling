@@ -6,12 +6,14 @@ export default function Words() {
 
     const dispatch = useDispatch()
 
-    
+    const rhymeReturn = useSelector(store=>store.rhyme)
+    const synonymReturn = useSelector(store=>store.synonym)
 
     const [rhyme, setRhyme] = useState('');
     const [synonym, setSynonym] = useState('');
 
-
+    console.log(rhymeReturn)
+    console.log(synonymReturn)
     return (
         <div>
             <h1>This is where the stuff will go</h1>
@@ -27,6 +29,12 @@ export default function Words() {
                 value={rhyme}
                 onChange={(event) => setRhyme(event.target.value)}>
             </input>
+            <button
+                onClick={()=>{
+                    dispatch({type: 'GET_RHYME', payload: rhyme})
+                    dispatch({type: 'GET_SYNONYM', payload: synonym})
+                }}
+            >SEND EM</button>
         </div>
     )
 }
