@@ -35,6 +35,7 @@ export default function Words() {
                     dispatch({type: 'GET_SYNONYM', payload: synonym})
                 }}
             >SEND EM</button>
+            <button onClick={()=>console.log(rhymeReturn, synonymReturn)}>LOGEM</button>
         </div>
     )
 }
