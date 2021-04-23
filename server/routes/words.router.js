@@ -5,7 +5,7 @@ const axios = require('axios').default;
 const router = express.Router();
 
 //get request to get synonym
-router.get('/:synonym', (req, res)=>{
+router.get('/synonym/:synonym', (req, res)=>{
     console.log(`in synonym with ${req.params.synonym}`)
     axios.request({
         method: 'GET',
@@ -22,7 +22,7 @@ router.get('/:synonym', (req, res)=>{
 })
 
 //get request to get rhyming word
-router.get('/:rhyme', (req, res)=>{
+router.get('/rhyme/:rhyme', (req, res)=>{
     console.log(`in synonym with ${req.params.synonym}`)
     axios.request({
         method: 'GET',

@@ -4,6 +4,7 @@ import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
 import blogSaga from './blog.saga'
 import nasaSaga from './nasa.saga'
+import wordsSaga from './words.saga'
 
 export default function* rootSaga() {
   yield all([
@@ -12,5 +13,6 @@ export default function* rootSaga() {
     userSaga(),
     blogSaga(),
     nasaSaga(),
+    wordsSaga(),
   ]);
 }
