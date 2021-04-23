@@ -5,8 +5,8 @@ function* getRhyme(action) {
     try {
         console.log('in getRhyme saga with payload', action.payload)
             const response = yield axios.get(`/api/words/rhyme/${action.payload}`)
-            console.log('rhyme response:', response)
-            yield put({ type: 'SET_RHYME', payload: response })
+            console.log('rhyme response saga:', response.data)
+            yield put({ type: 'SET_RHYME', payload: response.data})
     } catch (error) {
         console.error('error from getRhyme saga:', error)
     }
@@ -15,8 +15,8 @@ function* getSynonym(action) {
     try {
         console.log('in getSynonym saga with payload', action.payload)
             const response = yield axios.get(`/api/words/synonym/${action.payload}`)
-            console.log('synonym response:', response)
-            yield put({ type: 'SET_SYNONYM', payload: response })
+            console.log('synonym response saga:', response.data)
+            yield put({ type: 'SET_SYNONYM', payload: response.data})
     } catch (error) {
         console.error('error from getSynonym saga:', error)
     }

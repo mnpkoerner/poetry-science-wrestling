@@ -6,14 +6,13 @@ export default function Words() {
 
     const dispatch = useDispatch()
 
-    const rhymeReturn = useSelector(store=>store.rhyme)
-    const synonymReturn = useSelector(store=>store.synonym)
+    const rhymeReturn = useSelector(store=>store.words.rhyme)
+    const synonymReturn = useSelector(store=>store.words.synonym)
 
     const [rhyme, setRhyme] = useState('');
     const [synonym, setSynonym] = useState('');
 
-    console.log(rhymeReturn)
-    console.log(synonymReturn)
+
     return (
         <div>
             <h1>This is where the stuff will go</h1>
