@@ -19,7 +19,7 @@ import Contact from '../Contact/Contact'
 import Audio from '../Audio/Audio'
 import KFAI from '../KFAI/KFAI'
 import NASA from '../NASA/NASA'
-import Words from '../Words/Words'
+
 
 
 function App() {
@@ -111,11 +111,7 @@ function App() {
               path="/register">
               <Register />
             </Route>
-            <Route
-              exact
-              path="/words">
-              <Words />
-            </Route>
+
 
             <ProtectedRoute
               exact
