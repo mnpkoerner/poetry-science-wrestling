@@ -12,7 +12,7 @@ const userRouter = require('./routes/user.router');
 const demo = require('./routes/demo.router.js');
 const blog = require('./routes/blog.router')
 const nasa = require('./routes/nasa.router')
-const words = require('./routes/words.router')
+
 
 
 // Body parser middleware
@@ -31,7 +31,7 @@ app.use('/api/user', userRouter);
 app.use('/api/demo', demo);
 app.use('/api/blog', blog);
 app.use('/api/nasa', nasa)
-app.use('/api/words', words)
+
 
 
 // Serve static files
