@@ -1,33 +1,39 @@
-import {useHistory} from 'react-router-dom'
-import {useEffect} from 'react'
-import { useDispatch, useSelector} from 'react-redux';
+import { useHistory } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
-export default function Blog () {
+export default function Blog() {
 
     const dispatch = useDispatch()
     const history = useHistory()
 
     const posts = useSelector(store => store.posts);
 
-    useEffect(()=>{
-        dispatch({type: 'GET_POSTS'})
+    useEffect(() => {
+        dispatch({ type: 'GET_POSTS' })
     }, [dispatch])
 
     console.log('posts', posts)
 
-    return(
+    return (
         <>
-            <h1 onClick={()=>history.push('/register')}>LOGIN</h1>
+            <h1 onClick={() => history.push('/register')}>LOGIN</h1>
             {/* <pre>{JSON.stringify(posts)}</pre> */}
 
-                {posts.map((post)=>{
-                    return(
-                        <div>
-                            <h1>{post.title}</h1>
-                            <p>{post.body}</p>
-                        </div>
-                    )
-                })}
+            {posts.map((post) => {
+                return (
+                    <div>
+                        <h1>{post.title}</h1>
+                        <p>{post.body}</p>
+                        <p>Recent shows archived
+                                <a
+                                href="https://www.kfai.org/program/poetry-science-wrestling/"
+                                rel="external">
+                                here
+                                </a></p>
+                    </div>
+                )
+            })}
 
 
         </>
