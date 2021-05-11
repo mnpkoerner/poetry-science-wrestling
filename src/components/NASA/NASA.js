@@ -41,7 +41,7 @@ export default function NASA() {
             <input
                 type="date"
                 id="start"
-                name="trip-start"
+                name="nasa-start"
                 value={date}
                 onChange={(event) => setDate(event.target.value)}
                 min="1996-06-16"

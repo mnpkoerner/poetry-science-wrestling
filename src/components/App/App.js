@@ -27,8 +27,8 @@ function App() {
 
   return (
     <Router >
-      <div className="App">
-        <header className="App-header">
+      <div>
+        <header>
 
           <div>
             <Link to="/home">
@@ -51,9 +51,6 @@ function App() {
             </Link>
             <Link to="/nasa">
               NASA
-            </Link>
-            <Link to="/words">
-              Words
             </Link>
           </div>
 
