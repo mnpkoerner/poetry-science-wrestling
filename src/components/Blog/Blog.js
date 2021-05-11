@@ -17,24 +17,25 @@ export default function Blog() {
 
     return (
         <>
-            <h1 onClick={() => history.push('/register')}>LOGIN</h1>
-            {/* <pre>{JSON.stringify(posts)}</pre> */}
+            <div className="text-container">
+                <h1 onClick={() => history.push('/register')}>LOGIN</h1>
+                {/* <pre>{JSON.stringify(posts)}</pre> */}
 
-            {posts.map((post) => {
-                return (
-                    <div>
-                        <h1>{post.title}</h1>
-                        <p>{post.body}</p>
-                        <p>Recent shows archived
+                {posts.map((post) => {
+                    return (
+                        <div>
+                            <h1>{post.title}</h1>
+                            <p>{post.body}</p>
+                            <p>Recent shows archived
                                 <a
-                                href="https://www.kfai.org/program/poetry-science-wrestling/"
-                                rel="external">
-                                here
+                                    href="https://www.kfai.org/program/poetry-science-wrestling/"
+                                    rel="external">
+                                    here
                                 </a></p>
-                    </div>
-                )
-            })}
-
+                        </div>
+                    )
+                })}
+            </div>
 
         </>
     )
