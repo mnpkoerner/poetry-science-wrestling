@@ -24,10 +24,10 @@ export default function Blog() {
                 {posts.map((post) => {
                     return (
                         <div>
-                            <h1>{post.title}</h1>
+                            <h2>{post.title}</h2>
                             <p>{post.body}</p>
-                            <p>Recent shows archived
-                                <a
+                            <p>
+                                Recent shows archived <a
                                     href="https://www.kfai.org/program/poetry-science-wrestling/"
                                     rel="external">
                                     here

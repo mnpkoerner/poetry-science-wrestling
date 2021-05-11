@@ -1,6 +1,24 @@
 body{
   padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Francois One', sans-serif;
+}
+
+p, button, input, textarea, ::placeholder, .nav-bar {
+  font-family: 'Francois One', sans-serif;
+}
+
 .text-container{
   width: 75%;
+  margin: auto;
+}
+
+.post-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
 }

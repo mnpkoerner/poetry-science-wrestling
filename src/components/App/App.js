@@ -30,8 +30,9 @@ function App() {
       <div>
         <header>
 
-          <div>
-            <Link to="/home">
+          <div className="nav-bar">
+            <Link
+              to="/home">
               Home
             </Link>
             <Link to="/about">

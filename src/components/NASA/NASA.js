@@ -33,9 +33,9 @@ export default function NASA() {
     }, [dispatch])
 
     return (
-        <>
-            <p>This is where we'll make some fun API calls to NASA's servers</p>
-            <button onClick={() => console.log(nasa)}>CHECK VALUE</button>
+        <div className="text-container">
+            <h1>NASA Photo of the day</h1>
+
             <label for="start">Start date:</label>
 
             <input
@@ -47,12 +47,13 @@ export default function NASA() {
                 min="1996-06-16"
                 max={limit()}>
             </input>
-            <button onClick={()=>dispatch({type: 'GET_PHOTO', payload: date})}>Get</button>
+            <button onClick={()=>dispatch({type: 'GET_PHOTO', payload: date})}>Get a new photo</button>
+
             <div>
                 <h2>{nasa.title}</h2>
                 <p>{nasa.explanation}</p>
                 {display(nasa)}
             </div>
-        </>
+        </div>
     )
 }
