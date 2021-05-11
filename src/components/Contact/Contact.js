@@ -17,7 +17,7 @@ export default function Contact() {
                 <p>
                     poetryscienceandwrestling@gmail.com
                 </p>
-                ""
+       
             </main>
         </div>
     )
