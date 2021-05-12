@@ -11,21 +11,20 @@ function RegisterForm() {
   const errors = useSelector((store) => store.errors);
   const user = useSelector((store) => store.user);
 
-  const history = useHistory();
   const dispatch = useDispatch();
 
-  const registerUser = (event) => {
-    event.preventDefault();
-    console.log(username, password)
+  // const registerUser = (event) => {
+  //   event.preventDefault();
+  //   console.log(username, password)
 
-    dispatch({
-      type: 'REGISTER',
-      payload: {
-        username: username,
-        password: password,
-      },
-    });
-  }; // end registerUser
+  //   dispatch({
+  //     type: 'REGISTER',
+  //     payload: {
+  //       username: username,
+  //       password: password,
+  //     },
+  //   });
+  // }; // end registerUser
 
   return (
     <>
