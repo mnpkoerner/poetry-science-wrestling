@@ -23,10 +23,22 @@ function* getPost(action) {
     }
 }
 
+function* deletePost(action) {
+    try{
+        console.log('in delete saga with ', action.payload)
+        yield axios.delete(`/api/blog/${action.payload}`)
+        yield put({type: 'GET_POSTS'})
+    }
+    catch (error){
+        console.log(error)
+    }
+}
+
 
 function* blogSaga() {
     yield takeLatest('NEW_POST', newPost);
     yield takeLatest('GET_POSTS', getPost)
+    yield takeLatest('DELETE_POST', deletePost)
   }
 
   export default blogSaga;

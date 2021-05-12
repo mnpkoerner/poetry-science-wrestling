@@ -33,6 +33,19 @@ router.post('/', rejectUnauthenticated, (req, res)=>{
     })
 })
 
-
+router.delete('/:id', rejectUnauthenticated, (req, res)=>{
+    const id = req.params.id
+    const queryText = `
+        DELETE FROM "post"
+        WHERE "id" = $1
+    `
+    pool.query(queryText, [id]).then((response)=>{
+        console.log(response)
+        res.sendStatus(204);
+    }).catch((error)=>{
+        console.log(error);
+        res.sendStatus(500);
+    })
+})
 
 module.exports = router;

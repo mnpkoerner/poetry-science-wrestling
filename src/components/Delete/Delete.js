@@ -12,12 +12,17 @@ export default function Delete({ post }) {
     const [update, setUpdate] = useState('')
     const [edit, setEdit] = useState(false)
 
+    const deletePost = (postInfo) => {
+        dispatch({type: 'DELETE_POST', payload: postInfo})
+        console.log(postInfo)
+    }
     const editPost = (postInfo) => {
         console.log(postInfo)
     }
 
     return (
         <>
+            <button onClick={() => deletePost(post.id)}>Delete</button>
             <button onClick={() => editPost(post.id)}>Edit</button>
         </>
     )
