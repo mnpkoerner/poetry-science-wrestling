@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import Delete from '../Delete/Delete'
 
 export default function Blog() {
 
@@ -8,6 +9,7 @@ export default function Blog() {
     const history = useHistory()
 
     const posts = useSelector(store => store.posts);
+    const user = useSelector(store=>store.user)
 
     useEffect(() => {
         dispatch({ type: 'GET_POSTS' })
@@ -32,6 +34,7 @@ export default function Blog() {
                                     rel="external">
                                     here
                                 </a></p>
+                                {user.id ? <Delete post={post}/> : <span></span>}
                         </div>
                     )
                 })}
