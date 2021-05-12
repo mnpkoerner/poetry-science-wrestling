@@ -1,13 +1,23 @@
-body{
+body, #root{
   padding: 0;
+  margin: 0;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Francois One', sans-serif;
 }
 
-p, button, input, textarea, ::placeholder, .nav-bar {
+p, button, input, textarea, ::placeholder, .nav-bar, label, a {
   font-family: 'Francois One', sans-serif;
+}
+
+.nav-bar{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: pink;
 }
 
 .text-container{

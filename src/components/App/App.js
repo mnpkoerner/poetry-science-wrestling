@@ -20,6 +20,12 @@ import Audio from '../Audio/Audio'
 import KFAI from '../KFAI/KFAI'
 import NASA from '../NASA/NASA'
 
+const style = {
+  margin: "1.2rem",
+  textDecoration: "none",
+  color: 'black'
+};
+
 
 
 function App() {
@@ -32,25 +38,38 @@ function App() {
 
           <div className="nav-bar">
             <Link
+              style={style}
               to="/home">
               Home
             </Link>
-            <Link to="/about">
+            <Link
+              style={style}
+              to="/about">
               About
             </Link>
-            <Link to="/crossword">
+            <Link
+              style={style}
+              to="/crossword">
               Crossword
             </Link>
-            <Link to="/contact">
+            <Link
+              style={style}
+              to="/contact">
               Contact
             </Link>
-            <Link to="/audio">
+            <Link
+              style={style}
+              to="/audio">
               Audio
             </Link>
-            <Link to="/kfai">
+            <Link
+              style={style}
+              to="/kfai">
               KFAI
             </Link>
-            <Link to="/nasa">
+            <Link
+              style={style}
+              to="/nasa">
               NASA
             </Link>
           </div>
@@ -114,7 +133,7 @@ function App() {
             <ProtectedRoute
               exact
               path="/newpost">
-                <NewPost/>
+              <NewPost />
             </ProtectedRoute>
 
 
